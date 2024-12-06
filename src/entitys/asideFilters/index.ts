@@ -1,0 +1,5 @@
+export {budgetSlice} from "./model/budgetSlice"
+export {genderSlice} from "./model/genderSlice"
+export {searchSlice} from "./model/searchSlice"
+export {citysSlice} from "./model/citysSlice"
+export {streetsSlice} from "./model/streetsSlice"
