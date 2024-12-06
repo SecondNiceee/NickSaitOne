@@ -17,9 +17,9 @@ const CityFilters = () => {
     console.log("Рендер City Filters")
 
     return (
-        <div>
+        <div className="flex flex-col gap-5 items-center">
             <p className='text-white text-xl'>City:</p>
-            <div>
+            <div className="flex flex-col gap-4 border-solid border-2 w-[100%] border-[#2d7aff] rounded-md p-4 md:border-none md:p-0">
                 <div className='flex gap-3'>
                     <input checked = {citysFilter.Moscow} onChange={changeHandler('Moscow')} id="moscow" type="checkbox" />
                     <label className='text-white text-lg' htmlFor="moscow">Moscow</label>

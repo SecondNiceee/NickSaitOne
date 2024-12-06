@@ -1,11 +1,11 @@
 import BaseProvider from './providers/BaseProvider';
-import AppRoter from './AppRoter';
+import AppRouter from './AppRouter';
 import "../styles/index.css"
 
 const AppEntry = () => {
     return (
         <BaseProvider>
-            <AppRoter/>
+            <AppRouter/>
         </BaseProvider>
     );
 };
