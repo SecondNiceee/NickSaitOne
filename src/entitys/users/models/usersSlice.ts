@@ -2,37 +2,45 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { TypeUser } from "./TypeUser"
 import { GET } from "../../../shared/api/methods";
-import getRandomNumber from "../../../shared/functions/getRandomNumber";
-import makeUsers from "../../../shared/functions/makeUsers";
-
+import { makeUsers } from "../../../shared/functions/makeUsers";
+import { TypeStatus } from "../../../shared/models/typeStatus";
 
 
 
 interface IInitial{
     users : TypeUser[],
-    status : "pending" | "rejected" | "fulfilled",
+    status : TypeStatus,
 
 }
 
 const initialState:IInitial = {
     users : [],
-    status : "pending"
+    status : "pending",
 }
+
 export const getUsers = createAsyncThunk( 
     'getUsers',
-    async function  () {
-        const users = await GET<TypeUser[]>({endpoint : "/users" })
+    async function  (_, {signal}) {
+        const users = await GET<TypeUser[]>({endpoint : "/users", signal })
 
         makeUsers(users)
 
         return users
     }
  )
-export const usersSlice = createSlice({
+
+ let id = 11 // для имитации сервера
+
+
+ export const usersSlice = createSlice({
     name : "userSlice",
     initialState : initialState,
     reducers : {
-
+        addUser( state, action:PayloadAction<Omit<TypeUser, "id">> ){
+            const newUser = action.payload
+            state.users.push({...newUser, id : id})
+            id+=1;
+        }
     },
     extraReducers(builder) {
         builder.addCase( getUsers.rejected, ( state ) => {
@@ -51,3 +59,5 @@ export const usersSlice = createSlice({
     },
 
 })
+
+export const {addUser} = usersSlice.actions

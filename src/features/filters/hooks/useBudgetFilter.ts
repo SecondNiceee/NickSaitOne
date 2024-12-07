@@ -1,7 +1,6 @@
 import  { useMemo } from 'react';
 import { TypeUser } from '../../../entitys/users';
 import { useAppSelector } from '../../../shared/models/reduxHooks';
-import { TBudgetFilter } from '../../../shared/models/filterTypes';
 
 const useBudgetFilter = (users : TypeUser[]) => {
 

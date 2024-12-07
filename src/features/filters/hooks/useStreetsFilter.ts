@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import  { useMemo } from 'react';
 import { useAppSelector } from '../../../shared/models/reduxHooks';
 import { TypeUser } from '../../../entitys/users';
 import { TStreetsFilter } from '../../../shared/models/filterTypes';

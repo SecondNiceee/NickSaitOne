@@ -9,7 +9,6 @@ export type TypeUser = {
     address : {
         street : TStreets,
         city : TSitys,
-        zipcode : string,
     },
     phone : string,
     website : string,

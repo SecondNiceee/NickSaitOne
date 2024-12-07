@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import  { useMemo } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../shared/models/reduxHooks';
 import { TypeUser } from '../../../entitys/users';
 import { addToFavorities, removeFavorities } from '../../../entitys/favoritiesUsers/models/favoritiesUsersSlice';

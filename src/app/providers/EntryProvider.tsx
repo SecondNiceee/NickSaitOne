@@ -9,7 +9,7 @@ export const EntryProvider = ({children} : {children : ReactNode}) => {
     const dispatch = useAppDispatch()
     useEffect( () => {  
         dispatch(getUsers())
-    } , [] ) // Получаем Юзерсов с бэка только один раз
+    } , [dispatch] ) // Получаем Юзерсов с бэка только один раз
 
     return <>
     {children}</>

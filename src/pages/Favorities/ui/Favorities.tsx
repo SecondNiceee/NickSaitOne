@@ -3,13 +3,13 @@ import { User } from '../../../entitys/users';
 import { useFilters } from '../../../features/filters';
 
 export const Favorities = () => {
-    const favoritiesUsers = useAppSelector( (state) => state.favoritiesUser.favoritiesUsers )
+    const favoritiesUsers = useAppSelector( (state) => state.favoritiesUser.favoritiesUsers.reverse() ) // Переворачиваем для того что бы новые юзерсы были первыми
 
     const filteredUsers = useFilters(favoritiesUsers)
     
     return (
         <div className="flex flex-col gap-5 mt-5 mb-5">
-            {filteredUsers.map( (user, index) => <User key={index} {...user} /> )}
+            {filteredUsers.reverse().map( (user, index) => <User key={index} {...user} /> )}
         </div>
     );
 };
