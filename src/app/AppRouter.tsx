@@ -7,6 +7,7 @@ import { Profile } from '../pages/Profile';
 import { Create } from '../pages/Create';
 import { LazyRoute } from "../shared/ui/LazyRoute";
 import { AboutSait } from "../pages/AboutSait";
+import { MobileFilters } from "../pages/MobileFilters";
 const AppRouter = () => {
     
 
@@ -17,7 +18,7 @@ const AppRouter = () => {
                 <Route index path={routes.favorites} element = { <LazyRoute Comp = {<Favorities />} /> } />                  
             </Route>
             <Route element = {<BaseLayout menuOnly = {true} />}>           
-                <Route path={routes.mobFilters} element = { <LazyRoute Comp = {<Favorities />} /> } />
+                <Route path={routes.mobFilters} element = { <LazyRoute Comp = {<MobileFilters />} /> } />
                 <Route index path={routes.profile} element = { <LazyRoute Comp = {<Profile />}  /> } />       
                 <Route index path={routes.create} element = { <LazyRoute Comp = {<Create />} />} />     
                 <Route index path={routes.aboutSait} element = { <LazyRoute Comp = {<AboutSait />} />} />     
