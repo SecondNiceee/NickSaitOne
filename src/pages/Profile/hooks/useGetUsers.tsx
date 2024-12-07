@@ -21,7 +21,6 @@ const useGetUsers = ({setUser, setUserStatus, id} : IUseGetUsers) => {
             const response = await GET<TypeUser[]>({endpoint : "/users" , params : {id : id}, signal})
             const user = response[0]
             makeUser(user)
-            console.log(user)
             return user
         }
         if (!id){

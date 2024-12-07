@@ -14,7 +14,6 @@ const CityFilters = () => {
         dispatch(setCity({city, value : e.target.checked}))
     }
 
-    console.log("Рендер City Filters")
 
     return (
         <div className="flex flex-col gap-5 items-center">

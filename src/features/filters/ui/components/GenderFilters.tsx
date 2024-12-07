@@ -12,7 +12,6 @@ const GenderFilters = () => {
         dispatch(setGender({key, value : e.target.checked}))
     }
 
-    console.log("Рендер гендер фильтра")
 
     return (
         <div className="flex flex-col gap-5 items-center">

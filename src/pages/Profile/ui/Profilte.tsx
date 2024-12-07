@@ -13,8 +13,6 @@ export const Profile = () => {
   const [user, setUser] = useState<TypeUser | null>(null);
   const [userStatus, setUserStatus] = useState<TypeStatus>("pending");
 
-  console.log(user )
-
   useGetUsers({ setUser, setUserStatus, id });
 
   return (
