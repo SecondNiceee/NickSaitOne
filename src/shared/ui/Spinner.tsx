@@ -3,10 +3,10 @@ import HashLoader from "react-spinners/HashLoader";
 
 const Spinner = () => {
     return (
-        <div className='h-[100%] w-[100%] flex items-center justify-center '>
+        <div className='h-[50vh] w-[100%] flex items-center justify-center '>
             <HashLoader
                 color={"white"}
-                size={150}
+                size={50}
                 aria-label="Loading Spinner"
                 data-testid="loader"
             />
