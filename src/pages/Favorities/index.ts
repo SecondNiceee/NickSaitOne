@@ -1,0 +1,1 @@
+export {Favorities} from "./ui/Favorities";

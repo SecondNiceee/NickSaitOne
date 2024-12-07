@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Filters from "../../../widgets/FiltersAside/ui/components/Filters";
+import Filters from "../../../features/filters/ui/components/Filters";
 
 export const MobileFilters = () => {
 

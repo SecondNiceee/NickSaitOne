@@ -1,4 +1,5 @@
-import Filters from './components/Filters';
+import Filters from "./components/Filters";
+
 
 export const FiltersAside = () => {
 

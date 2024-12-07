@@ -2,6 +2,7 @@
 import {configureStore} from "@reduxjs/toolkit"
 import { usersSlice } from "../entitys/users"
 import { budgetSlice, citysSlice, genderSlice, searchSlice, streetsSlice } from "../entitys/asideFilters"
+import { favoritiesUsers } from "../entitys/favoritiesUsers"
 
 export const store = configureStore({
     reducer : {
@@ -10,7 +11,8 @@ export const store = configureStore({
         genderSlice : genderSlice.reducer,
         budgetSlice : budgetSlice.reducer,
         citysSlice : citysSlice.reducer,
-        streetsSlice : streetsSlice.reducer
+        streetsSlice : streetsSlice.reducer,
+        favoritiesUser : favoritiesUsers.reducer
     },
     middleware : getDefaultMiddleware => getDefaultMiddleware({serializableCheck : false})
 } )

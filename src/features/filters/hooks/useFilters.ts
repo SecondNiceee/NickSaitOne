@@ -7,7 +7,7 @@ import useSeacrhFilter from './useSeachFilter';
 
 
 
-const useFilters = (users : TypeUser[]) => {
+export const useFilters = (users : TypeUser[]) => {
 
     const usersWithStreetsFilter = useStreetsFilter(users)
 
@@ -24,4 +24,3 @@ const useFilters = (users : TypeUser[]) => {
 
 };
 
-export default useFilters;
