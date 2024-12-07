@@ -1,0 +1,1 @@
+export {AboutSait} from "./ui/AboutSait"
