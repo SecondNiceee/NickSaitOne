@@ -18,7 +18,7 @@ export const Header = () => {
         <header className='md:sticky static top-0 w-[100%] pt-5 pb-5 bg-[#14131a] z-20 container flex '>
             <nav className={`${cl.menu} ${isMenuOpen ? '!translate-x-[0%]' : ''}`} >
                 {headerLinks.map( (e, i) => 
-                <NavLink onClick={clickHandler} className={({isActive}) => `${cl.navLink} ${isActive ? 'text-white font-bold decoration-gray-400' : 'text-gray-700 font-medium'}`} to={e.path}>{e.name}</NavLink>
+                <NavLink key={i} onClick={clickHandler} className={({isActive}) => `${cl.navLink} ${isActive ? 'text-white font-bold decoration-gray-400' : 'text-gray-700 font-medium'}`} to={e.path}>{e.name}</NavLink>
                  )}
             </nav> 
             <div className='xs:hidden flex mx-auto'>
