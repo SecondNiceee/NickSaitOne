@@ -4,6 +4,7 @@ import { TypeUser } from "../../../entitys/users";
 import { TypeStatus } from "../../../shared/models/typeStatus";
 import useGetUsers from "../hooks/useGetUsers";
 import UserProfile from "./UserProfile";
+import Spinner from "../../../shared/ui/Spinner";
 
 type ParamsType = {
   id: string;
@@ -20,7 +21,7 @@ export const Profile = () => {
       {userStatus === "rejected" ? (
         <h2 className="text-white text-xl md:text-2xl text-bold">Server Error</h2>
       ) : userStatus === "pending" ? (
-        <h2 className="text-white text-xl md:text-2xl text-bold">Loading...</h2>
+        <h2 className="text-white text-xl md:text-2xl text-bold"><Spinner/></h2>
       ) : (
         user ? <UserProfile user={user} />
         : <h2 className="text-white text-xl md:text-2xl text-bold">The user does not match with loading status!</h2>

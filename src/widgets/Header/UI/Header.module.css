@@ -1,0 +1,12 @@
+.menu{
+    @apply px-5 py-4 justify-between border-solid 
+    xs:flex rounded-xl shadow-sm
+     shadow-black flex xs:flex-row xs:static flex-col z-50 gap-3 w-[calc(100%-40px)] xs:w-[100%] 
+     absolute left-[20px] translate-x-[calc(-100%-40px)] bg-[#14131a] border-2 border-white
+      transition-transform ease-in-out duration-300 xs:!translate-x-[0%]
+     top-[88px]
+}
+
+.navLink{
+    @apply font-mono md:text-2xl text-xl transition-colors duration-500 text-center
+}

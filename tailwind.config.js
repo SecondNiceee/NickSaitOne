@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -24,8 +26,21 @@ module.exports = {
         },
         center : true
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: [
+    plugin(function( {addBase, addComponents, addUtilitie, theme} ){
+      addComponents({
+        ".h2": {
+          fontSize : theme("fontSize.xl"),
+          fontWeight : 700,
+          color : "white",
+          '@screen md':{
+            fontSize : theme("fontSize.2xl")
+          }
+        } 
+      })
+    })
+  ],
 }
 

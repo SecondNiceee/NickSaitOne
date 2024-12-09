@@ -87,7 +87,7 @@ export const CreateUser = () => {
           labelText="Budget:"
           name="budget"
           placeholder="Budget"
-          type="number" />
+          type="string" />
 
         <FormInput
           error={errors.company?.name}

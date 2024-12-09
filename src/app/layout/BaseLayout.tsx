@@ -7,13 +7,13 @@ const BaseLayout = ({ menuOnly = false }: { menuOnly?: boolean }) => {
   return (
     <>
       <Header />
-      <main className="container grid grid-cols-12  md:mt-5">
+      <main className="container grid grid-cols-12 md:mt-5">
 
         {!menuOnly && (
           <>
-            <h3 className="sticky md:flex hidden top-[107.2px] col-start-1 text-white col-end-5 justify-center items-center text-2xl font-bold bg-[#14131a] z-20">
+            <h2 className="h2 sticky md:flex hidden top-[107.2px] col-start-1 col-end-5 justify-center items-center bg-[#14131a] z-20">
               Фильтры
-            </h3>
+            </h2>
             <FilterInput />
             <FiltersAside />
             <FilterButton />
